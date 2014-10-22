@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="simditor" extends="struts-default">
+		<action name="index">
+			<result>/index.jsp</result>
+		</action>
+
+		<!-- 图片上传 -->
+		<action name="ImgUpload" class="com.home.web.ImgUploadAction" method="imgUpload">
+		</action>
+		
+		<!-- 保存 -->
+		<action name="ArticleSave" class="com.home.web.ArticleAction" method="articleSave">
+			<result>/articleList.jsp</result>
+		</action>
+		
+		<!-- 查看 -->
+		<action name="ArticleView" class="com.home.web.ArticleAction" method="articleView">
+			<result>/articleView.jsp</result>
+		</action>
+	</package>
+</struts>
